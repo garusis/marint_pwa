@@ -1,14 +1,42 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content>
+  <ion-grid no-padding>
+    <ion-row margin-top margin-bottom></ion-row>
+    <ion-row justify-content-center no-padding>
+      <ion-col col-4 no-padding></ion-col>
+      <ion-col col-4 no-padding text-center>
+        <img src="assets/imgs/woody.png" id="imgProfile">
+      </ion-col>
+      <ion-col col-4 no-padding></ion-col>
+    </ion-row>
+    <ion-row no-padding>
+      <ion-col text-center no-padding padding-top padding-bottom>
+        <span ion-text color="light" id="nameProfile">{{user?.name + " " + user?.surname}}</span>
+        <p ion-text color="light" no-margin>{{user?.email}}</p>
+      </ion-col>
+    </ion-row>
+    <ion-row margin-top id="coursesData" padding>
+      <ion-col text-center>
+        <span ion-text color="lightblue2" class="numCourses">{{mycourses}}</span>
+        <p ion-text color="light" no-margin>Mis Cursos</p>
+      </ion-col>
+      <ion-col text-center>
+        <span ion-text color="lightblue2" class="numCourses">{{allcourses - mycourses}}</span>
+        <p ion-text color="light" no-margin>Cursos no inscritos</p>
+      </ion-col>
+    </ion-row>
+    <ion-row margin-top>
+      <ion-col text-center (click)="loadProfile()" >
+        <img src="assets/imgs/perfil.png" class="imgOptions">
+        <p ion-text color="light" no-margin>Perfil</p>
+      </ion-col>
+      <ion-col text-center>
+        <img src="assets/imgs/cursos.png" class="imgOptions">
+        <p ion-text color="light" no-margin>Cursos</p>
+      </ion-col>
+      <ion-col text-center>
+        <img src="assets/imgs/contacto.png" class="imgOptions">
+        <p ion-text color="light" no-margin>Contáctanos</p>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

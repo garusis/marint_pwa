@@ -1,0 +1,22 @@
+<ion-content>
+  <ion-grid no-padding>
+    <ion-row margin-top margin-bottom></ion-row>
+    <ion-row justify-content-center no-padding>
+      <ion-col col-4 no-padding></ion-col>
+      <ion-col col-4 no-padding padding-top text-center class="img-profile" (click)="changePicture()">
+        <img src="assets/imgs/woody.png">
+        <div align-items-end>
+          <span ion-text color="light">Cambiar Foto</span>
+          <ion-icon name="ios-camera-outline" color="light"></ion-icon>
+        </div>
+      </ion-col>
+      <ion-col col-4 no-padding></ion-col>
+    </ion-row>
+    <ion-row no-padding>
+      <ion-col text-center no-padding padding-top padding-bottom>
+        <span ion-text color="light" id="nameProfile">{{user?.name + " " + user?.surname}}</span>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

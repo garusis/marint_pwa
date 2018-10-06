@@ -1,0 +1,13 @@
+.ios,.md{
+  page-login {
+    .content {
+      background-image: linear-gradient(to bottom right,#bbb 1%,transparent 100%),url(../assets/imgs/login_background.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      position: relative;
+      border: none;
+    }
+  }
+}

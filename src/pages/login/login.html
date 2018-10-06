@@ -1,0 +1,29 @@
+<ion-content>
+  <div padding-bottom></div>
+  <div margin-top margin-bottom padding>
+    <img src="assets/imgs/logo_original.png" style="background: transparent;" padding>
+  </div>
+  <ion-list margin-top padding-top no-lines>
+    <ion-item color="marint">
+      <ion-label ion-text color="light">
+        <ion-icon name="person"></ion-icon> Usuario
+      </ion-label>
+      <ion-input type="text" [(ngModel)]="user.username"></ion-input>
+    </ion-item>
+    <ion-item color="marint">
+      <ion-label ion-text color="light">
+        <ion-icon name="lock" color="light"></ion-icon> Contraseña
+      </ion-label>
+      <ion-input type="password" [(ngModel)]="user.password"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <button ion-button large block color="marint" text-capitalize (click)="login()" >
+    Ingresar
+  </button>
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="marint">
+    <ion-title>Registrarse</ion-title>
+  </ion-toolbar>
+</ion-footer>
